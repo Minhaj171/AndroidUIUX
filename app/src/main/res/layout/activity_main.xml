@@ -1,88 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".MainActivity"
-    android:background="@drawable/bg"
-    >
+    tools:context=".MainActivity">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/bgimageID"
+        android:layout_width="fill_parent"
+        android:layout_height="295dp"
+        android:layout_marginBottom="2200dp"
+        android:background="@drawable/bg" />
+
+    <LinearLayout
+        android:id="@+id/LLparentID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp">
-        <TextView
-            android:id="@+id/hello"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello,"
-            android:textSize="20sp"
-            android:textColor="#fff">
-        </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Minhajul Islam"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-black"
-            android:textColor="@color/white"
-            android:layout_below="@+id/hello"
-            android:layout_marginTop="10dp">
-        </TextView>
+        android:orientation="vertical">
 
-        <ImageButton
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_alignParentRight="true"
-            android:adjustViewBounds="true"
-            android:background="@drawable/profile"/>
-        
         <RelativeLayout
-            android:id="@+id/r1"
+            android:id="@+id/RLparent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/search_bg"
-            android:layout_marginTop="100dp">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/search"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp">
-            </ImageView>
+            android:padding="30dp">
 
             <TextView
+                android:id="@+id/TVhello"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Search"
-                android:layout_marginLeft="55dp"
-                android:layout_centerVertical="true"
-                android:textSize="18dp"
-                android:textColor="#03082b"/>
+                android:text="Hello,"
+                android:textColor="#fff"
+                android:textSize="20sp">
+            </TextView>
 
+            <TextView
+                android:id="@+id/TVownerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TVhello"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Saiful Islam"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/IBprofile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/profile" />
+
+            <RelativeLayout
+                android:id="@+id/R2child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/search_bg">
+
+                <ImageView
+                    android:id="@+id/IVsearch"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/search">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/TVsearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="55dp"
+                    android:text="Search"
+                    android:textColor="#03082b"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/IVarrowsign"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/navigate_arrow">
+                </ImageView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/LLchildID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/RLchildID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/frontendimageID"
+                    android:layout_width="200dp"
+                    android:layout_height="300dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/frontend" />
+
+                <TextView
+                    android:id="@+id/frontendTxtID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frontend"
+                    android:textSize="25dp"
+                    android:textColor="#d709082b"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"
+                    />
+
+                <TextView
+                    android:id="@+id/frontendcourseTxtID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 Courses"
+                    android:textSize="14dp"
+                    android:textColor="#ab03082b"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="70dp"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RLchildID2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backendImageID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="286dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/backend" />
+
+                <TextView
+                    android:id="@+id/backendTxtID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Backend"
+                    android:textColor="#d709082b"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/backendCoursesTxtID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="70dp"
+                    android:text="12 Courses"
+                    android:textColor="#ab03082b"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/RLchild3ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/listcoursesTxtID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Courses List (3)"
+                android:textColor="#03082b"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginLeft="23dp"/>
+            
             <ImageView
+                android:id="@+id/rightArrowImgID"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/navigate_arrow"
+                android:src="@drawable/rightarrow"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="20dp">
-            </ImageView>
+                android:layout_marginRight="20dp"/>
 
+        </RelativeLayout>
 
+        <RelativeLayout
+            android:id="@+id/RLchild4ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/rectangles1ID"
+                android:layout_width="380dp"
+                android:layout_height="80dp"
+                android:background="@drawable/rectangle1"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/rectanglesImgID"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/js"
+                android:layout_marginLeft="35dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/rectanglesTxtID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JavaScript"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#d703082b"
+                android:layout_marginLeft="105dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/rectanglesTxt2ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 Hours, 20 Minutes"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#6003082b"
+                android:layout_marginLeft="105dp"
+                android:layout_marginTop="50dp"/>
 
 
 
         </RelativeLayout>
 
-    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/RLchild5ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageButton
+                android:id="@+id/rectangles2ImgID"
+                android:layout_width="380dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rectangle2" />
+
+            <ImageView
+                android:id="@+id/rectangles2Img2ID"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/other"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="6dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/rectangles2TxtID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Responsive Design"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#d703082b"
+                android:layout_marginLeft="105dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/rectangles2Txt2ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Hours, 20 Minutes"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#6003082b"
+                android:layout_marginLeft="105dp"
+                android:layout_marginTop="40dp"/>
 
 
+        </RelativeLayout>
 
+    </LinearLayout>
 
-
-</LinearLayout>
+</FrameLayout>
